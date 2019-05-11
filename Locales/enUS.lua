@@ -2,9 +2,9 @@
 -- ElvUI_FogofWar By Lockslap (US, Bleeding Hollow)
 -------------------------------------------------------------------------------
 local debug = false
---[===[@debug@
+--@debug@
 debug = true
---@end-debug@]===]
+--@end-debug@
 local AceLocale = LibStub:GetLibrary("AceLocale-3.0")
 local L = AceLocale:NewLocale("ElvUI_FogofWar", "enUS", true, debug)
 if not L then return end
