@@ -1,0 +1,24 @@
+## Interface: 80100
+## Author: Lockslap, Klix
+## Title: |cff1784d1ElvUI|r Fog of War
+## Version: 3.0
+## Notes: Removes the fog of war from the world map.
+## RequiredDeps: ElvUI
+
+Libraries\LibStub\LibStub.lua
+Libraries\CallbackHandler-1.0\CallbackHandler-1.0.xml
+Libraries\AceLocale-3.0\AceLocale-3.0.xml
+
+Locales\enUS.lua
+Locales\deDE.lua
+Locales\esES.lua
+Locales\esMX.lua
+Locales\frFR.lua
+Locales\itIT.lua
+Locales\koKR.lua
+Locales\ptBR.lua
+Locales\ruRU.lua
+Locales\zhCN.lua
+Locales\zhTW.lua
+
+ElvUI_FogofWar.lua
