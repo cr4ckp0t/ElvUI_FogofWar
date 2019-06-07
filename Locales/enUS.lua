@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------
--- ElvUI_FogofWar By Lockslap (US, Bleeding Hollow)
+-- ElvUI_FogofWar By Crackpotx (US, Lightbringer)
 -------------------------------------------------------------------------------
 local debug = false
 --@debug@
@@ -11,5 +11,5 @@ if not L then return end
 
 L["Fog of War"] = true
 L["Overlay Color"] = true
-L["Plugins by |cff9382c9Lockslap|r"] = true
-L["Thanks for using and supporting my work!  -- |cff9382c9Lockslap|r\n\n|cffff0000If you find any bugs, or have any suggestions for any of my addons, please open a ticket at that particular addon's page on CurseForge."] = true
+L["Plugins by |cff9382c9Crackpotx|r"] = true
+L["Thanks for using and supporting my work!  -- |cff9382c9Crackpotx|r\n\n|cffff0000If you find any bugs, or have any suggestions for any of my addons, please open a ticket at that particular addon's page on CurseForge."] = true

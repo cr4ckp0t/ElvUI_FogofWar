@@ -1,7 +1,7 @@
 ## Interface: 80100
-## Author: Lockslap, Klix
+## Author: Crackpotx, Klix
 ## Title: |cff1784d1ElvUI|r Fog of War
-## Version: 3.0.3
+## Version: 3.1.0
 ## Notes: Removes the fog of war from the world map.
 ## RequiredDeps: ElvUI
 
