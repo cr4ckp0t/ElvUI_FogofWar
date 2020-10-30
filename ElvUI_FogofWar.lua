@@ -1,6 +1,7 @@
 -------------------------------------------------------------------------------
 -- ElvUI Fog of War By Crackpotx (US, Lightbringer)
 -- Rewritten for BFA By Klix (EU, Twisting Nether)
+-- Added Shadowlands support Sugarfoot (US, Borean Tundra)
 -------------------------------------------------------------------------------
 local E, L, V, P, G = unpack(ElvUI)
 local Fog = E:NewModule("FogofWar", "AceHook-3.0", "AceEvent-3.0")
