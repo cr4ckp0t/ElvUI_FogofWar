@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------
--- ElvUI Fog of War By Crackpotx (US, Lightbringer)
+-- ElvUI Fog of War By Crackpotx (US, Arthas)
 -- Rewritten for BFA By Klix (EU, Twisting Nether)
 -- Added Shadowlands support Sugarfoot (US, Borean Tundra)
 -------------------------------------------------------------------------------
