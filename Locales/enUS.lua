@@ -1,12 +1,7 @@
+-- ElvUI Fog of War By Crackpotx (US, Arthas)
 -------------------------------------------------------------------------------
--- ElvUI_FogofWar By Crackpotx (US, Arthas)
--------------------------------------------------------------------------------
-local debug = false
---@debug@
-debug = true
---@end-debug@
 local AceLocale = LibStub:GetLibrary("AceLocale-3.0")
-local L = AceLocale:NewLocale("ElvUI_FogofWar", "enUS", true, debug)
+local L = AceLocale:NewLocale("ElvUI_FogofWar", "enUS", false)
 if not L then return end
 
 L["Fog of War"] = true
