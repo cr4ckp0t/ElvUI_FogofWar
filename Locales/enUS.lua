@@ -9,3 +9,4 @@ L["Fog of War"] = true
 L["Overlay Color"] = true
 L["Plugins by |cff9382c9Crackpotx|r"] = true
 L["Thanks for using and supporting my work!  -- |cff9382c9Crackpotx|r\n\n|cffff0000If you find any bugs, or have any suggestions for any of my addons, please open a ticket at that particular addon's page on CurseForge."] = true
+--@localization(locale="enUS", format="lua_additive_table", same-key-is-true=true, escape-non-ascii=true, handle-unlocalized="english")@
