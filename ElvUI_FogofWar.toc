@@ -1,7 +1,7 @@
-## Interface: 90207
+## Interface: 100000
 ## Author: Crackpotx, Klix, Sugarfoot
 ## Title: |cff1784d1ElvUI|r Fog of War
-## Version: 4.2.6
+## Version: 4.2.7
 ## Notes: Removes the fog of war from the world map.
 ## RequiredDeps: ElvUI
 
@@ -22,4 +22,5 @@ Locales\zhCN.lua
 Locales\zhTW.lua
 
 ElvUI_FogofWar.lua
+
 
