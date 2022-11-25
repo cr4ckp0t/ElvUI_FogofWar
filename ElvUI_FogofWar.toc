@@ -1,7 +1,7 @@
 ## Interface: 100002
 ## Author: Crackpot, Klix, Sugarfoot
 ## Title: |cff1784d1ElvUI|r Fog of War
-## Version: 4.2.8
+## Version: 4.3.0
 ## Notes: Removes the fog of war from the world map.
 ## RequiredDeps: ElvUI
 
