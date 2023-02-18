@@ -5,8 +5,8 @@
 -------------------------------------------------------------------------------
 local E, L, V, P, G = unpack(ElvUI)
 local Fog = E:NewModule("FogofWar", "AceHook-3.0", "AceEvent-3.0")
-local L = LibStub("AceLocale-3.0"):GetLocale("ElvUI_FogofWar", false)
-local EP = LibStub("LibElvUIPlugin-1.0")
+local L = E.Libs.ACL:GetLocale("ElvUI_FogofWar", false)
+local EP = E.Libs.EP
 local addon, ns = ...
 
 local unpack = _G["unpack"]
@@ -196,7 +196,7 @@ local function InjectOptions()
 end
 
 function Fog:Initialize()
-	Fog.db = E.db.FogofWar
+	self.db = E.db.FogofWar
 	EP:RegisterPlugin(addon, InjectOptions)
 end
 
