@@ -7,6 +7,7 @@ local E, L, V, P, G = unpack(ElvUI)
 local Fog = E:NewModule("FogofWar", "AceHook-3.0", "AceEvent-3.0")
 local L = E.Libs.ACL:GetLocale("ElvUI_FogofWar", false)
 local EP = E.Libs.EP
+local ACH = E.Libs.ACH
 local addon, ns = ...
 
 local unpack = _G["unpack"]
@@ -150,49 +151,14 @@ P["FogofWar"] = {
 
 local function InjectOptions()
 	if not E.Options.args.Crackpotx then
-		E.Options.args.Crackpotx = {
-			type = "group",
-			order = -2,
-			name = L["Plugins by |cff9382c9Crackpotx|r"],
-			args = {
-				thanks = {
-					type = "description",
-					order = 1,
-					name = L[
-						"Thanks for using and supporting my work!  -- |cff9382c9Crackpotx|r\n\n|cffff0000If you find any bugs, or have any suggestions for any of my addons, please open a ticket at that particular addon's page on CurseForge."
-					]
-				}
-			}
-		}
-	elseif not E.Options.args.Crackpotx.args.thanks then
-		E.Options.args.Crackpotx.args.thanks = {
-			type = "description",
-			order = 1,
-			name = L[
-				"Thanks for using and supporting my work!  -- |cff9382c9Crackpotx|r\n\n|cffff0000If you find any bugs, or have any suggestions for any of my addons, please open a ticket at that particular addon's page on CurseForge."
-			]
-		}
+		E.Options.args.Crackpotx = ACH:Group(L["Plugins by |cff0070deCrackpotx|r"])
+	end
+	if not E.Options.args.Crackpotx.args.thanks then
+		E.Options.args.Crackpotx.args.thanks = ACH:Description(L["Thanks for using and supporting my work!  -- |cff0070deCrackpotx|r\n\n|cffff0000If you find any bugs, or have any suggestions for any of my addons, please open a ticket at that particular addon's page on CurseForge."], 1)
 	end
 
-	E.Options.args.Crackpotx.args.fogofwar = {
-		type = "group",
-		name = L["Fog of War"],
-		args = {
-			overlay = {
-				type = "color",
-				order = 1,
-				name = L["Overlay Color"],
-				hasAlpha = true,
-				get = function()
-					return Fog.db.overlay.r, Fog.db.overlay.g, Fog.db.overlay.b, Fog.db.overlay.a
-				end,
-				set = function(_, r, g, b, a)
-					Fog.db.overlay.r, Fog.db.overlay.g, Fog.db.overlay.b, Fog.db.overlay.a = r, g, b, a
-					Fog:Refresh()
-				end
-			}
-		}
-	}
+	E.Options.args.Crackpotx.args.fogofwar = ACH:Group(L["Fog of War"])
+	E.Options.args.Crackpotx.args.fogofwar.args.overlay = ACH:Color(L["Overlay Color"], nil, 1, true, nil, function() return Fog.db.overlay.r, Fog.db.overlay.g, Fog.db.overlay.b, Fog.db.overlay.a end, function(_, r, g, b, a) Fog.db.overlay.r, Fog.db.overlay.g, Fog.db.overlay.b, Fog.db.overlay.a = r, g, b, a; Fog:Refresh() end)
 end
 
 function Fog:Initialize()
