@@ -11,7 +11,7 @@ local ACH = E.Libs.ACH
 local addon, ns = ...
 
 local unpack = _G["unpack"]
-local GetAddOnMetadata = _G["GetAddOnMetadata"]
+local GetAddOnMetadata = C_AddOns.GetAddOnMetadata
 local C_Map_GetMapArtID = C_Map.GetMapArtID
 local C_MapExplorationInfo_GetExploredMapTextures = C_MapExplorationInfo.GetExploredMapTextures
 local C_Map_GetMapArtLayers = C_Map.GetMapArtLayers
