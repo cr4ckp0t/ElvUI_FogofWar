@@ -11,7 +11,7 @@ local ACH = E.Libs.ACH
 local addon, ns = ...
 
 local unpack = _G["unpack"]
-local GetAddOnMetadata = _G["GetAddOnMetadata"]
+local C_AddOns_GetAddOnMetadata = C_AddOns.GetAddOnMetadata
 local C_Map_GetMapArtID = C_Map.GetMapArtID
 local C_MapExplorationInfo_GetExploredMapTextures = C_MapExplorationInfo.GetExploredMapTextures
 local C_Map_GetMapArtLayers = C_Map.GetMapArtLayers
@@ -19,7 +19,7 @@ local C_Map_GetMapArtLayers = C_Map.GetMapArtLayers
 local mod, floor, ceil, tonumber = math.fmod, math.floor, math.ceil, tonumber
 local wipe, concat, ipairs, pairs = table.wipe, table.concat, ipairs, pairs
 
-Fog.version = GetAddOnMetadata("ElvUI_FogofWar", "Version")
+Fog.version = C_AddOns_GetAddOnMetadata("ElvUI_FogofWar", "Version")
 
 local function TexturePool_ResetVertexColor(pool, texture)
 	texture:SetVertexColor(1, 1, 1)
