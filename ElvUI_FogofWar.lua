@@ -21,16 +21,9 @@ local wipe, concat, ipairs, pairs = table.wipe, table.concat, ipairs, pairs
 
 Fog.version = C_AddOns_GetAddOnMetadata("ElvUI_FogofWar", "Version")
 
-local function TexturePool_ResetVertexColor(pool, texture)
-	texture:SetVertexColor(1, 1, 1)
-	texture:SetAlpha(1)
-	return TexturePool_HideAndClearAnchors(pool, texture)
-end
-
 function Fog:OnEnable()
 	for pin in WorldMapFrame:EnumeratePinsByTemplate("MapExplorationPinTemplate") do
 		self:SecureHook(pin, "RefreshOverlays", "MapExplorationPin_RefreshOverlays")
-		pin.overlayTexturePool.resetterFunc = TexturePool_ResetVertexColor
 	end
 end
 
@@ -47,6 +40,11 @@ function Fog:Refresh()
 end
 
 function Fog:MapExplorationPin_RefreshOverlays(pin, fullUpdate)
+	for overlay in pin.overlayTexturePool:EnumerateActive() do
+		overlay:SetVertexColor(1,1,1)
+		overlay:SetAlpha(1)
+	end
+
 	local mapID = pin:GetMap():GetMapID()
 	if not mapID then
 		return
@@ -79,6 +77,7 @@ function Fog:MapExplorationPin_RefreshOverlays(pin, fullUpdate)
 	local TILE_SIZE_WIDTH = layerInfo.tileWidth
 	local TILE_SIZE_HEIGHT = layerInfo.tileHeight
 
+	local drawLayer, subLevel = pin.dataProvider:GetDrawLayer()
 	local r, g, b, a = self.db.overlay.r, self.db.overlay.g, self.db.overlay.b, self.db.overlay.a
 	for key, files in pairs(data) do
 		if not exploredTilesKeyed[key] then
@@ -128,7 +127,7 @@ function Fog:MapExplorationPin_RefreshOverlays(pin, fullUpdate)
 
 					texture:SetVertexColor(r, g, b)
 					texture:SetAlpha(a)
-					texture:SetDrawLayer("ARTWORK", -1)
+					texture:SetDrawLayer(drawLayer, subLevel - 1)
 					texture:Show()
 
 					if fullUpdate then
