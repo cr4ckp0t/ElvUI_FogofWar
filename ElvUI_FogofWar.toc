@@ -1,8 +1,8 @@
-## Interface: 110105
+## Interface: 110107
 ## Author: Crackpot, Klix, Sugarfoot
 ## Title: ElvUI Fog of War
 ## IconTexture: Interface\AddOns\ElvUI_FogofWar\Media\crackpot
-## Version: 5.1.2
+## Version: 5.1.3
 ## Notes: Removes the fog of war from the world map.
 ## RequiredDeps: ElvUI
 
@@ -19,6 +19,7 @@ Locales\zhCN.lua
 Locales\zhTW.lua
 
 ElvUI_FogofWar.lua
+
 
 
 
